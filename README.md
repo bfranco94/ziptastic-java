@@ -1,2 +1,3 @@
-# ziptastic-java
-Offcial Java Library for Ziptastic.
+# Offcial Ziptastic Java Library
+
+## Coming soon!
