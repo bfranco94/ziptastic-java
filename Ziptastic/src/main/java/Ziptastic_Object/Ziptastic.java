@@ -31,8 +31,6 @@ public class Ziptastic {
         String urlBuilder = url;
         urlBuilder = urlBuilder.concat(Integer.toString(zipcode));
         
-        System.out.println(urlBuilder);
-        
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
              
             HttpGet httpGet = new HttpGet(urlBuilder);
@@ -40,9 +38,7 @@ public class Ziptastic {
              
             try (CloseableHttpResponse response = httpclient.execute(httpGet)) {
                 
-                System.out.println(response.getStatusLine());
                 HttpEntity entity = response.getEntity();
-                System.out.println(entity.toString());
                 getData = EntityUtils.toString(entity);
                 EntityUtils.consume(entity);
                 
