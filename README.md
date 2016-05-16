@@ -1,4 +1,4 @@
-# **Offcial Ziptastic Java Library**
+# **Offcial Ziptastic Java Library (ALPHA)**
 
 ## **Index**
 
