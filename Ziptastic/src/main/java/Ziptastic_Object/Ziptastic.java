@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package Ziptastic_Object;
 
 import java.io.IOException;
@@ -23,8 +24,7 @@ public class Ziptastic {
        this.apiKey = key; 
     }
     
-    
-    public static String ForwardGeocoding(int zipcode) throws IOException{
+    public static String GetFromZipcode(int zipcode) throws IOException{
         
         String getData;
         
