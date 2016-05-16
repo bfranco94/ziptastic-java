@@ -12,23 +12,31 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-/**
- *
- * @author bzfra_000
- */
+
+
 public class Ziptastic {
     
-    private final static String apikey = "someApiKey";
-    private final static String url = "https://zip.getziptastic.com/v3/US/42701/";
+    private static String url = "https://zip.getziptastic.com/v3/US/";
+    private static String apiKey;
     
-    public static String zipCall() throws IOException{
+    public Ziptastic(String key) {
+       this.apiKey = key; 
+    }
+    
+    
+    public static String ForwardGeocoding(int zipcode) throws IOException{
         
         String getData;
         
+        String urlBuilder = url;
+        urlBuilder = urlBuilder.concat(Integer.toString(zipcode));
+        
+        System.out.println(urlBuilder);
+        
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
              
-            HttpGet httpGet = new HttpGet(url);
-            httpGet.addHeader("x-key", apikey);
+            HttpGet httpGet = new HttpGet(urlBuilder);
+            httpGet.addHeader("x-key", apiKey);
              
             try (CloseableHttpResponse response = httpclient.execute(httpGet)) {
                 
@@ -43,7 +51,4 @@ public class Ziptastic {
         return getData;
     }
 
-    public static void main(String[] args) throws IOException{
-        System.out.println(zipCall());
-    }
 }
