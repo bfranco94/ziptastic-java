@@ -26,8 +26,8 @@ public class Ziptastic {
     }
     
     public static String GetFromLongLat(double latitude, double longitude, int radius) throws IOException{
-        String urlBuilder = reverseUrl;
         
+        String urlBuilder = reverseUrl; 
         urlBuilder = urlBuilder.concat(Double.toString(latitude) + "/" + Double.toString(longitude) + "/" + Integer.toString(radius));
         
         return MakeRequest(urlBuilder);
