@@ -36,6 +36,6 @@ ________________________________________________________________________________
 
 ####Future Work####
   - Break apart and store values from Requests in self-contained array of hash-maps, while handeling potential error codes appropriately.
-  
+  - Start unit testing and build coverage.
 
 _________________________________________________________________________________________________________________________________________
