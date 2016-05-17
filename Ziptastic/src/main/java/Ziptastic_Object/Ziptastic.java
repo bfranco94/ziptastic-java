@@ -18,22 +18,38 @@ import org.apache.http.util.EntityUtils;
 public class Ziptastic {
     
     private static String url = "https://zip.getziptastic.com/v3/US/";
+    private static String reverseUrl = "https://zip.getziptastic.com/v3/reverse/";
     private static String apiKey;
     
     public Ziptastic(String key) {
        this.apiKey = key; 
     }
     
-    public static String GetFromZipcode(int zipcode) throws IOException{
+    public static String GetFromLongLat(double latitude, double longitude, int radius) throws IOException{
+        String urlBuilder = reverseUrl;
         
-        String getData;
+        urlBuilder = urlBuilder.concat(Double.toString(latitude) + "/" + Double.toString(longitude) + "/" + Integer.toString(radius));
+        
+        return MakeRequest(urlBuilder);
+    }
+    
+    public static String GetFromZipcode(int zipcode) throws IOException{
         
         String urlBuilder = url;
         urlBuilder = urlBuilder.concat(Integer.toString(zipcode));
         
+        return MakeRequest(urlBuilder);   
+    }
+    
+    
+    
+    private static String MakeRequest(String url) throws IOException{
+        
+        String getData;
+        
         try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
              
-            HttpGet httpGet = new HttpGet(urlBuilder);
+            HttpGet httpGet = new HttpGet(url);
             httpGet.addHeader("x-key", apiKey);
              
             try (CloseableHttpResponse response = httpclient.execute(httpGet)) {
@@ -43,8 +59,8 @@ public class Ziptastic {
                 EntityUtils.consume(entity);
                 
             }
-        }
-        return getData;
+        }   
+        return getData;  
     }
-
+    
 }
