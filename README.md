@@ -3,6 +3,9 @@
 ## **Index**
 
 1. -[ ] **Ziptastic Object**
+
+[![Coverage Status](https://coveralls.io/repos/github/bfranco94/ziptastic-java/badge.svg?branch=master)](https://coveralls.io/github/bfranco94/ziptastic-java?branch=master)
+  
   - Introduction
   - Documentation
   - Usage Examples
@@ -11,6 +14,7 @@ ________________________________________________________________________________
 
 ###Ziptastic Object
 
+[![Coverage Status](https://coveralls.io/repos/github/bfranco94/ziptastic-java/badge.svg?branch=master)](https://coveralls.io/github/bfranco94/ziptastic-java?branch=master)
 
 ####Introduction
 
