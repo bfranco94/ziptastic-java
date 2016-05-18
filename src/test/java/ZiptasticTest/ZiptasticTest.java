@@ -38,10 +38,7 @@ public class ZiptasticTest {
     @Test
     public void IvalidKeyTest() throws Exception{
         Ziptastic spy = PowerMockito.spy(new Ziptastic("abc123"));
-        
-        
         String results = spy.GetFromZipcode(48867);
-        System.out.println(results);
         assertEquals(testOutput, results);
                      
     }
