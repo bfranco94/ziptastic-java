@@ -8,6 +8,7 @@ package ZiptasticTest;
 
 
 import Ziptastic_Object.Ziptastic;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.api.mockito.PowerMockito;
@@ -17,6 +18,7 @@ import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.anyString;
 import static org.powermock.api.mockito.PowerMockito.when;
 import static org.powermock.api.support.membermodification.MemberMatcher.method;
+import org.powermock.core.classloader.annotations.PowerMockIgnore;
 /**
  *
  * @author bfranco
@@ -24,16 +26,23 @@ import static org.powermock.api.support.membermodification.MemberMatcher.method;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(Ziptastic.class)
+@PowerMockIgnore("javax.net.ssl.*")
+
 public class ZiptasticTest {
     
+    private String testOutput = "{\n" +
+                                    "  \"message\": \"API Key Invalid.\"\n" +
+                                "}";
+        
     
     @Test
-    public void GetFromZipcodeTest() throws Exception{
+    public void IvalidKeyTest() throws Exception{
         Ziptastic spy = PowerMockito.spy(new Ziptastic("abc123"));
         
-        PowerMockito.doReturn(true).when(spy, "GetFromZipcode", anyInt());
         
-        spy.GetFromZipcode(48867);
+        String results = spy.GetFromZipcode(48867);
+        System.out.println(results);
+        assertEquals(testOutput, results);
                      
     }
 }
