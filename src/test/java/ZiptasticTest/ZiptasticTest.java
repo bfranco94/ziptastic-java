@@ -30,7 +30,7 @@ import org.powermock.core.classloader.annotations.PowerMockIgnore;
 
 public class ZiptasticTest {
     
-    private String testOutput = "{\n" +
+    private String InvalidKeyResult = "{\n" +
                                     "  \"message\": \"API Key Invalid.\"\n" +
                                 "}";
         
@@ -39,7 +39,7 @@ public class ZiptasticTest {
     public void IvalidKeyTest() throws Exception{
         Ziptastic spy = PowerMockito.spy(new Ziptastic("abc123"));
         String results = spy.GetFromZipcode(48867);
-        assertEquals(testOutput, results);
+        assertEquals(InvalidKeyResult, results);
                      
     }
 }
