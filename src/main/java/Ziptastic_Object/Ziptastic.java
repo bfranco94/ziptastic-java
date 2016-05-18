@@ -62,5 +62,4 @@ public class Ziptastic {
         }   
         return getData;  
     }
-    
 }
