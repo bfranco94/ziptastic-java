@@ -11,7 +11,7 @@ ________________________________________________________________________________
 
 ###Ziptastic Object
 
-[![Coverage Status](https://coveralls.io/repos/github/bfranco94/ziptastic-java/badge.svg?branch=master)](https://coveralls.io/github/bfranco94/ziptastic-java?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/bfranco94/ziptastic-java/badge.svg?branch=master)](https://coveralls.io/github/bfranco94/ziptastic-java?branch=master) [![Build Status](https://travis-ci.org/Ziptastic/ziptastic-java.svg?branch=master)](https://travis-ci.org/Ziptastic/ziptastic-java)
 
 ####Introduction
 

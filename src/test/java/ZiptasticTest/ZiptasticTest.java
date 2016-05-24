@@ -36,6 +36,22 @@ public class ZiptasticTest {
         
     
     @Test
+    public void IvalidKeyTestZip() throws Exception{
+        Ziptastic spy = PowerMockito.spy(new Ziptastic("abc123"));
+        String results = spy.GetFromZipcode(48867);
+        assertEquals(InvalidKeyResult, results);
+                     
+    }
+    
+    @Test
+    public void IvalidKeyTestLongLat() throws Exception{
+        Ziptastic spy = PowerMockito.spy(new Ziptastic("abc123"));
+        String results = spy.GetFromLongLat(48867.0, 4543.0, 10);
+        assertEquals(InvalidKeyResult, results);
+                     
+    }
+    
+    @Test
     public void IvalidKeyTest() throws Exception{
         Ziptastic spy = PowerMockito.spy(new Ziptastic("abc123"));
         String results = spy.GetFromZipcode(48867);
