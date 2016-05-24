@@ -50,12 +50,4 @@ public class ZiptasticTest {
         assertEquals(InvalidKeyResult, results);
                      
     }
-    
-    @Test
-    public void IvalidKeyTest() throws Exception{
-        Ziptastic spy = PowerMockito.spy(new Ziptastic("abc123"));
-        String results = spy.GetFromZipcode(48867);
-        assertEquals(InvalidKeyResult, results);
-                     
-    }
 }
