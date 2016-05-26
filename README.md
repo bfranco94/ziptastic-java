@@ -33,7 +33,42 @@ ________________________________________________________________________________
   
   
 ####Usage Examples####
-  - COMING SOON!
+  - Forward Geocoding
+
+  	Ziptastic zipObj = new Ziptastic(apiKey);
+  	String result = zipObj.GetFromZipcode(zipcode);
+  	System.out.println(result);
+
+  - Reverse Geocoding
+
+  	Ziptastic zipObj = new Ziptastic(apiKey);
+  	String result = zipObj.GetFromLongLat(longitude, latitude, radius);
+  	System.out.println(result);
+
+####Sample Output####
+  - Invalid Key Request
+
+  		{
+  			"message": "API Key Invalid."
+		}
+
+
+  - Valid Key Request	
+  	
+  		[
+		    {
+		        "city": "Owosso",
+		        "geohash": "dpshsfsytw8k",
+		        "country": "US",
+		        "county": "Shiawassee",
+		        "state": "Michigan",
+		        "state_short": "MI",
+		        "postal_code": "48867",
+		        "latitude": 42.9934,
+		        "longitude": -84.1595,
+		        "timezone": "America/Detroit"
+		    }
+		]  	
 
 ####Future Work####
   - Break apart and store values from Requests in self-contained array of hash-maps, while handeling potential error codes appropriately.
