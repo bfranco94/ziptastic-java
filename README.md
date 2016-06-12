@@ -70,8 +70,12 @@ ________________________________________________________________________________
 		    }
 		]  	
 
-####Future Work####
-  - Add more Junit tests
-  - Add linting support for project. 
+####Maven Plugins####
+  - Checkstyle :  http://checkstyle.sourceforge.net/
+  - PMD        :  https://pmd.github.io/
 
+####Future Work####
+  - Add more tests
+  - Add support for version 3 of Ziptastic Service.
+  - Expand on java implementation of Ziptastic object. 
 _________________________________________________________________________________________________________________________________________
