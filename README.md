@@ -22,38 +22,38 @@ ________________________________________________________________________________
 #####Constructor Summary
   Constructor | Description
   -------|------------
-  Ziptastic(String apiKey) | Creates an empty Ziptastic object with the Ziptastic API Key value.
+  **Ziptastic**(String apiKey) | Creates an empty Ziptastic object with the Ziptastic API Key value.
   
 #####Method Summary
   
   Method | Description
   -------|------------
-  GetFromLongLat(double longitude, double latitude, int radius)  | Creates a url based on reverse geocoding, passes the url to the HTTPRequest method, and returns the results of a ReverseGeocoding API request.
-  GetFromZipcode(int zipcode)  | Creates a url based on forward geocoding, passes the url to the HTTPRequest method, and returns the results of a ForwardGeocoding API request. 
+  **GetFromLongLat**(double longitude, double latitude, int radius)  | Creates a url based on reverse geocoding, passes the url to the HTTPRequest method, and returns the results of a ReverseGeocoding API request.
+  **GetFromZipcode**(int zipcode)  | Creates a url based on forward geocoding, passes the url to the HTTPRequest method, and returns the results of a ForwardGeocoding API request. 
   
   
 ####Usage Examples####
-  - Forward Geocoding
+  - **Forward Geocoding**
 
   	Ziptastic zipObj = new Ziptastic(apiKey);
   	String result = zipObj.GetFromZipcode(zipcode);
   	System.out.println(result);
 
-  - Reverse Geocoding
+  - **Reverse Geocoding**
 
   	Ziptastic zipObj = new Ziptastic(apiKey);
   	String result = zipObj.GetFromLongLat(longitude, latitude, radius);
   	System.out.println(result);
 
 ####Sample Output####
-  - Invalid Key Request
+  - **Invalid Key Request**
 
   		{
   			"message": "API Key Invalid."
 		}
 
 
-  - Valid Key Request	
+  - **Valid Key Request**	
   	
   		[
 		    {
@@ -71,8 +71,8 @@ ________________________________________________________________________________
 		]  	
 
 ####Maven Plugins####
-  - Checkstyle :  http://checkstyle.sourceforge.net/
-  - PMD        :  https://pmd.github.io/
+  - **Checkstyle** :  http://checkstyle.sourceforge.net/
+  - **PMD**        :  https://pmd.github.io/
 
 ####Future Work####
   - Add more tests
