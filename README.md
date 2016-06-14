@@ -35,19 +35,19 @@ ________________________________________________________________________________
 ####Usage Examples####
   - **Forward Geocoding**
 
-  	'''
+  	```
   	Ziptastic zipObj = new Ziptastic(apiKey);
   	String result = zipObj.GetFromZipcode(zipcode);
   	System.out.println(result);
-  	'''
+  	```
   	
   - **Reverse Geocoding**
   	
-  	'''
+  	```
   	Ziptastic zipObj = new Ziptastic(apiKey);
   	String result = zipObj.GetFromLongLat(longitude, latitude, radius);
   	System.out.println(result);
-  	'''
+  	```
 
 ####Sample Output####
   - **Invalid Key Request**
