@@ -28,8 +28,8 @@ ________________________________________________________________________________
   
   Method | Description
   -------|------------
-  ```**GetFromLongLat**(double longitude, double latitude, int radius)```  | Creates a url based on reverse geocoding, passes the url to the HTTPRequest method, and returns the results of a ReverseGeocoding API request.
-  ```**GetFromZipcode**(int zipcode)```  | Creates a url based on forward geocoding, passes the url to the HTTPRequest method, and returns the results of a ForwardGeocoding API request. 
+  **GetFromLongLat**(double longitude, double latitude, int radius)  | Creates a url based on reverse geocoding, passes the url to the HTTPRequest method, and returns the results of a ReverseGeocoding API request.
+  **GetFromZipcode**(int zipcode)  | Creates a url based on forward geocoding, passes the url to the HTTPRequest method, and returns the results of a ForwardGeocoding API request. 
   
   
 ####Usage Examples####
@@ -40,7 +40,7 @@ ________________________________________________________________________________
   	String result = zipObj.GetFromZipcode(zipcode);
   	System.out.println(result);
   	```
-  	
+
   - **Reverse Geocoding**
   	
   	```
