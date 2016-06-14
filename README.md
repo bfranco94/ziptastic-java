@@ -75,7 +75,6 @@ ________________________________________________________________________________
   - **PMD**        :  https://pmd.github.io/
 
 ####Future Work####
-  - Add more tests
-  - Add support for version 3 of Ziptastic Service.
+  - Add more tests.
   - Expand on java implementation of Ziptastic object. 
 ___________________________________________________________________________________________
