@@ -44,18 +44,18 @@ public class Ziptastic {
     private static String MakeRequest(String url) throws IOException{
 
         String getData;
+        HttpEntity entity;
         HttpGet Request = new HttpGet(url);
 
         Request.addHeader("x-key", apiKey);
 
-        try (CloseableHttpClient httpclient = HttpClients.createDefault()){
-
-            try (CloseableHttpResponse response = httpclient.execute(Request)){
-
-                HttpEntity entity = response.getEntity();
+        try (CloseableHttpClient httpclient = HttpClients.createDefault())
+        {
+            try (CloseableHttpResponse response = httpclient.execute(Request))
+            {
+                entity = response.getEntity();
                 getData = EntityUtils.toString(entity);
                 EntityUtils.consume(entity);
-
             }
         }
         return getData;
