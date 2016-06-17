@@ -48,9 +48,9 @@ public class Ziptastic {
 
         Request.addHeader("x-key", apiKey);
 
-        try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
+        try (CloseableHttpClient httpclient = HttpClients.createDefault()){
 
-            try (CloseableHttpResponse response = httpclient.execute(Request)) {
+            try (CloseableHttpResponse response = httpclient.execute(Request)){
 
                 HttpEntity entity = response.getEntity();
                 getData = EntityUtils.toString(entity);

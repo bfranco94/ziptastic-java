@@ -4,4 +4,4 @@ jdk:
     - oraclejdk8
     
 sudo: false
-script: mvn checkstyle:check
+script: mvn checkstyle:checkstyle
